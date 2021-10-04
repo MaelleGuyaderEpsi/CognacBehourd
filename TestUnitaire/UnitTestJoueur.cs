@@ -7,7 +7,7 @@ namespace TestUnitaire
     public class UnitTestJoueur
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Test_Constructeur()
         {
         }
     }
