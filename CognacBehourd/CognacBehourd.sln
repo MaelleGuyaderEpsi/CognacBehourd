@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognacBehourd", "CognacBehourd.csproj", "{66D71524-DCEC-4FE6-96B9-0B43FB7767BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaire", "..\TestUnitaire\TestUnitaire.csproj", "{3C87FC1A-CEE9-4E40-9A62-B025075F3BC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66D71524-DCEC-4FE6-96B9-0B43FB7767BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D71524-DCEC-4FE6-96B9-0B43FB7767BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D71524-DCEC-4FE6-96B9-0B43FB7767BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D71524-DCEC-4FE6-96B9-0B43FB7767BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C87FC1A-CEE9-4E40-9A62-B025075F3BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C87FC1A-CEE9-4E40-9A62-B025075F3BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C87FC1A-CEE9-4E40-9A62-B025075F3BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C87FC1A-CEE9-4E40-9A62-B025075F3BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F6F1D50-1C6B-431C-8422-1C249C1170E4}
+	EndGlobalSection
+EndGlobal
