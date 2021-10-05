@@ -69,11 +69,20 @@ namespace TestUnitaire
                 joueurs.Add(new Joueur("Nom" + i, "Prenom" + i, i, i, "Arme" + i, "Armure" + i));
             }
 
+            
             Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
             Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
 
+            foreach (Joueur joueur in joueurs)
+            {
+                joueur.CalculPointPoid();
+            }
             affecterEquipe(joueurs, equipe1, equipe2);
 
+            foreach (Joueur joueur in joueurs)
+            {
+                joueur.CalculPointPoid();
+            }
             //Assert.AreEqual(equipe2.Joueurs.Count)
 
         }

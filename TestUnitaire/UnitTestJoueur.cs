@@ -35,7 +35,7 @@ namespace TestUnitaire
         }
 
         [TestMethod]
-        public void Test_du_Calcule_de_la_Valeur_d_un_Joueur()
+        public void Test_du_Calcul_de_la_Valeur_d_un_Joueur()
         {
             Joueur joueur1 = new Joueur("GROS", "Paul", 134, 2006, "Hache 2M", "Mailles");
             Joueur joueur2 = new Joueur("BLANC", "Louis", 47, 2020, "Dagues", "Mailles");
@@ -43,8 +43,8 @@ namespace TestUnitaire
             joueur1.CalculPointPoid();
             joueur2.CalculPointPoid();
 
-            Assert.AreEqual(joueur1.Valeur, 21.5);
-            Assert.AreEqual(joueur2.Valeur, 1.5);
+            Assert.AreEqual(24.5, joueur1.Valeur);
+            Assert.AreEqual(1.5, joueur2.Valeur);
         }
     }
 }
