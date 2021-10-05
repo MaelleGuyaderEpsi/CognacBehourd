@@ -212,5 +212,28 @@ namespace TestUnitaire
 
             Assert.IsTrue(diffMoy <= 8 || diffMoy >= -8);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(MyException),
+        "Team length not valid")]
+        public void Test_Nombre_De_Joueur_Inferieur_A_2()
+        {
+            Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
+
+            Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
+            Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
+
+            List<Joueur> joueurs = new List<Joueur>();
+
+            joueurs.Add(joueur1);
+
+            foreach (Joueur joueur in joueurs)
+            {
+                joueur.CalculPointPoid();
+            }
+            affecterEquipe(joueurs, equipe1, equipe2);
+
+
+        }
     }
 }
