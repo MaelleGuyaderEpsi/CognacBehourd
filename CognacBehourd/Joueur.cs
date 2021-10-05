@@ -14,6 +14,7 @@ namespace CognacBehourd
         public int Annee_dAdhesion { get; set; }
         public String Arme { get; set; }
         public String Armure { get; set; }
+		public Boolean age16 { get; set; }
         public float Valeur { get; set; }
 
 
@@ -25,10 +26,11 @@ namespace CognacBehourd
 			this.Annee_dAdhesion = 0;
 			this.Arme = "";
 			this.Armure = "";
+			this.age16 = false;
 			this.Valeur = 0;
 		}
 
-        public Joueur(String Nom, String Prenom, int Poids, int Annee_dAdhesion, String Arme = null, String Armure = null)
+        public Joueur(String Nom, String Prenom, int Poids, int Annee_dAdhesion, String Arme = null, String Armure = null, Boolean Age16 = false)
         {
 			this.Nom = Nom;
 			this.Prenom = Prenom;
@@ -36,6 +38,7 @@ namespace CognacBehourd
 			this.Annee_dAdhesion = Annee_dAdhesion;
 			this.Arme = Arme;
 			this.Armure = Armure;
+			this.age16 = Age16;
 			this.Valeur = 0;
 		}
 

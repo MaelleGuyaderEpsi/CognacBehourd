@@ -234,5 +234,29 @@ namespace TestUnitaire
 
 
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(MyException),
+        "age non respecter")]
+        public void Test_age_16()
+        {
+            Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles", false);
+
+
+            Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
+            Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
+
+            List<Joueur> joueurs = new List<Joueur>();
+
+            joueurs.Add(joueur1);
+
+            foreach (Joueur joueur in joueurs)
+            {
+                joueur.CalculPointPoid();
+            }
+            affecterEquipe(joueurs, equipe1, equipe2);
+
+
+        }
     }
 }
