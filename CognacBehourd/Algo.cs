@@ -11,6 +11,10 @@ namespace CognacBehourd
     {
         public static void affecterEquipe(List<Joueur> joueurs, Equipe equipe1, Equipe equipe2)
         {
+            if(joueurs.Count < 2)
+            {
+                throw new MyException("Team length not valid");
+            }
             equipe1.Joueurs.Clear();
             equipe2.Joueurs.Clear();
             float valeurEquipe1 = 0;
