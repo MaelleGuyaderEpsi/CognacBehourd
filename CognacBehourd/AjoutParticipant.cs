@@ -16,5 +16,27 @@ namespace CognacBehourd
         {
             InitializeComponent();
         }
+
+        private void Valider_Click(object sender, EventArgs e)
+        {
+            /*List<Joueur> joueurs = new List<Joueur>();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                joueurs.Add(new Joueur(
+                    (String)row.Cells[0].Value,
+                    (String)row.Cells[1].Value, 
+                    (int)row.Cells[2].Value, 
+                    (int)row.Cells[3].Value, 
+                    (String)row.Cells[4].Value, 
+                    (String)row.Cells[5].Value));
+            }
+            ((MainForm)this.Parent).joueurs = joueurs;
+            this.Close();*/
+        }
+
+        private void Annuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
