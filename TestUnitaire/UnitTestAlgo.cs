@@ -64,23 +64,17 @@ namespace TestUnitaire
         public void Test_Grand_Nombre_De_Joueur()
         {
             List<Joueur> joueurs = new List<Joueur>();
-            for
-            Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
-            Joueur joueur2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles");
-            Joueur joueur3 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques");
-            Joueur joueur4 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison");
-
-            
-
-            joueurs.Add(joueur4);
-            joueurs.Add(joueur3);
-            joueurs.Add(joueur2);
-            joueurs.Add(joueur1);
+            for(int i = 0; i < 2000; i++)
+            {
+                joueurs.Add(new Joueur("Nom" + i, "Prenom" + i, i, i, "Arme" + i, "Armure" + i));
+            }
 
             Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
             Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
 
             affecterEquipe(joueurs, equipe1, equipe2);
+
+            Assert.AreEqual(equipe2.Joueurs.Count)
 
         }
     }

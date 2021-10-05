@@ -58,6 +58,7 @@
     <Compile Include="AjoutParticipant.Designer.cs">
       <DependentUpon>AjoutParticipant.cs</DependentUpon>
     </Compile>
+    <Compile Include="Algo.cs" />
     <Compile Include="Equipe.cs" />
     <Compile Include="Joueur.cs" />
     <Compile Include="MainForm.cs">
