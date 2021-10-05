@@ -60,7 +60,7 @@ namespace TestUnitaire
         //
         #endregion
 
-       /* [TestMethod]
+       [TestMethod]
         public void Test_Grand_Nombre_De_Joueur()
         {
             List<Joueur> joueurs = new List<Joueur>();
@@ -82,7 +82,7 @@ namespace TestUnitaire
 
             affecterEquipe(joueurs, equipe1, equipe2);
 
-        }*/
+        }
 
         [TestMethod]
         [ExpectedException(typeof(MyException),

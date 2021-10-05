@@ -147,7 +147,7 @@ namespace CognacBehourd
 
 		public float pointAgeJoueur()
 		{
-				return (DateTime.Now.Year - this.Annee_dAdhesion) / 2;
+				return ((float)DateTime.Now.Year - this.Annee_dAdhesion) / 2;
 		}
 	}
 }
