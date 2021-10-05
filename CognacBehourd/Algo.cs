@@ -28,6 +28,11 @@ namespace CognacBehourd
             while (joueurs.Count > 0)
             {
                 Joueur meilleurJoueur = joueurs.MaxBy(x => x.Valeur).First();
+                if (!meilleurJoueur.age16)
+                {
+                    throw new MyExceptionAge("age non respecter");
+                }
+                    
                 if (equipe1.Joueurs.Count >= nbJoueurMaxByTeam)
                 {
                     equipe2.addJoueur(meilleurJoueur);

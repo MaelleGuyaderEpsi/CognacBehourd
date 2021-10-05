@@ -36,14 +36,24 @@ namespace CognacBehourd
                     int.Parse((string)row.Cells[2].Value),
                     int.Parse((string)row.Cells[3].Value),
                     (String)row.Cells[4].Value,
-                    (String)row.Cells[5].Value));
+                    (String)row.Cells[5].Value,
+                    true));
             }
             foreach (Joueur joueur in joueurs)
             {
                 joueur.CalculPointPoid();
             }
-            affecterEquipe(joueurs,equipe1,equipe2);
-            afficherEquipes();
+
+            try
+            {
+                affecterEquipe(joueurs, equipe1, equipe2);
+                afficherEquipes();
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
         }
 
         public void afficherEquipes()

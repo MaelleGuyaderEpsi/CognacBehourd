@@ -66,7 +66,7 @@ namespace TestUnitaire
             List<Joueur> joueurs = new List<Joueur>();
             for(int i = 0; i < 2000; i++)
             {
-                joueurs.Add(new Joueur("Nom" + i, "Prenom" + i, i, i, "Arme" + i, "Armure" + i));
+                joueurs.Add(new Joueur("Nom" + i, "Prenom" + i, i, i, "Arme" + i, "Armure" + i, true));
             }
 
             Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
@@ -88,11 +88,11 @@ namespace TestUnitaire
         {
             List<Joueur> joueurs = new List<Joueur>();
 
-            Joueur joueur1 = new Joueur("Jacquie", "Michel", 130, 1998, "Hache 2M", "Mailles");
-            Joueur joueur2 = new Joueur("Martin", "Dupont", 80, 2020, "Dagues", "Mailles");
-            Joueur joueur3 = new Joueur("Truc", "Muche", 60, 2005, "Dagues", "Mailles");
-            Joueur joueur4 = new Joueur("Maëlle", "Guyader", 85, 2021, "Dagues", "Mailles");
-            Joueur joueur5 = new Joueur("Marc", "Muche", 60, 2005, "Dagues", "Mailles");
+            Joueur joueur1 = new Joueur("Jacquie", "Michel", 130, 1998, "Hache 2M", "Mailles", true);
+            Joueur joueur2 = new Joueur("Martin", "Dupont", 80, 2020, "Dagues", "Mailles", true);
+            Joueur joueur3 = new Joueur("Truc", "Muche", 60, 2005, "Dagues", "Mailles", true);
+            Joueur joueur4 = new Joueur("Maëlle", "Guyader", 85, 2021, "Dagues", "Mailles", true);
+            Joueur joueur5 = new Joueur("Marc", "Muche", 60, 2005, "Dagues", "Mailles", true);
 
 
             joueurs.Add(joueur5);
@@ -121,10 +121,10 @@ namespace TestUnitaire
         {
             List<Joueur> joueurs = new List<Joueur>();
 
-            Joueur joueur1 = new Joueur("Jacquie", "Michel", 130, 1998, "Hache 2M", "Mailles");
-            Joueur joueur2 = new Joueur("Martin", "Dupont", 80, 2020, "Dagues", "Mailles");
-            Joueur joueur3 = new Joueur("Truc", "Muche", 60, 2005, "Dagues", "Mailles");
-            Joueur joueur4 = new Joueur("Maëlle", "Guyader", 85, 2021, "Dagues", "Mailles");
+            Joueur joueur1 = new Joueur("Jacquie", "Michel", 130, 1998, "Hache 2M", "Mailles", true);
+            Joueur joueur2 = new Joueur("Martin", "Dupont", 80, 2020, "Dagues", "Mailles", true);
+            Joueur joueur3 = new Joueur("Truc", "Muche", 60, 2005, "Dagues", "Mailles", true);
+            Joueur joueur4 = new Joueur("Maëlle", "Guyader", 85, 2021, "Dagues", "Mailles", true);
 
             joueurs.Add(joueur4);
             joueurs.Add(joueur3);
@@ -149,10 +149,10 @@ namespace TestUnitaire
         public void Test_Deux_Paires_Identiques()
         {
             List<Joueur> joueursPaire = new List<Joueur>();
-            Joueur joueurA1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
-            Joueur joueurA2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles");
-            Joueur joueurB1 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques");
-            Joueur joueurB2 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison");
+            Joueur joueurA1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles", true);
+            Joueur joueurA2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles", true) ;
+            Joueur joueurB1 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques", true);
+            Joueur joueurB2 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison", true);
             joueursPaire.Add(joueurA1);
             joueursPaire.Add(joueurA2);
             joueursPaire.Add(joueurB1);
@@ -176,10 +176,10 @@ namespace TestUnitaire
         public void Test_Poids_Equipe()
         {
             List<Joueur> joueursPoids = new List<Joueur>();
-            Joueur joueurA1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
-            Joueur joueurA2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles");
-            Joueur joueurB1 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques");
-            Joueur joueurB2 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison");
+            Joueur joueurA1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles", true);
+            Joueur joueurA2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles", true);
+            Joueur joueurB1 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques", true);
+            Joueur joueurB2 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison", true);
             joueursPoids.Add(joueurA1);
             joueursPoids.Add(joueurA2);
             joueursPoids.Add(joueurB1);
@@ -217,7 +217,7 @@ namespace TestUnitaire
         "Team length not valid")]
         public void Test_Nombre_De_Joueur_Inferieur_A_2()
         {
-            Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
+            Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles", true);
 
             Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
             Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
