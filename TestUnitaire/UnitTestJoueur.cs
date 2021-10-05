@@ -16,6 +16,7 @@ namespace TestUnitaire
             Assert.IsNotNull(joueur);
         }
 
+        [TestMethod]
         public void Test_Constructeur_Complex()
         {
             Joueur joueur = null;
@@ -33,6 +34,19 @@ namespace TestUnitaire
             Assert.AreEqual(joueur.Annee_dAdhesion, Annee_dAdhesion);
             Assert.AreEqual(joueur.Arme, Arme);
             Assert.AreEqual(joueur.Armure, Armure);
+        }
+
+        [TestMethod]
+        public void TestCalculeValeurJoueur()
+        {
+            Joueur joueur1 = new Joueur("GROS", "Paul", 134, 2006, "Hache 2M", "Mailles");
+            Joueur joueur2 = new Joueur("BLANC", "Louis", 47, 2020, "Dagues", "Mailles");
+
+            joueur1.CalculPointJoueur();
+            joueur2.CalculPointJoueur();
+
+            Assert.AreEqual(joueur1.Valeur, 21.5);
+            Assert.AreEqual(joueur2.Valeur, 1.5);
         }
     }
 }
