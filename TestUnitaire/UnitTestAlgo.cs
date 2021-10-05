@@ -74,7 +74,41 @@ namespace TestUnitaire
 
             affecterEquipe(joueurs, equipe1, equipe2);
 
-            Assert.AreEqual(equipe2.Joueurs.Count)
+            //Assert.AreEqual(equipe2.Joueurs.Count)
+
+        }
+
+        [TestMethod]
+        public void Test_Impair()
+        {
+            List<Joueur> joueurs = new List<Joueur>();
+
+            Joueur joueur1 = new Joueur("Jacquie", "Michel", 130, 1998, "Hache 2M", "Mailles");
+            Joueur joueur2 = new Joueur("Martin", "Dupont", 80, 2020, "Dagues", "Mailles");
+            Joueur joueur3 = new Joueur("Truc", "Muche", 60, 2005, "Dagues", "Mailles");
+            Joueur joueur4 = new Joueur("Maëlle", "Guyader", 85, 2021, "Dagues", "Mailles");
+            Joueur joueur5 = new Joueur("Marc", "Muche", 60, 2005, "Dagues", "Mailles");
+
+
+            joueurs.Add(joueur5);
+            joueurs.Add(joueur4);
+            joueurs.Add(joueur3);
+            joueurs.Add(joueur2);
+            joueurs.Add(joueur1);
+
+            Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
+            Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
+            
+            foreach (Joueur joueur in joueurs)
+            {
+                joueur.CalculPointPoid();
+            }
+            affecterEquipe(joueurs, equipe1, equipe2);
+
+            int countEquipe1 = equipe1.Joueurs.Count;
+            int countEquipe2 = equipe2.Joueurs.Count;
+
+            Assert.AreEqual(Math.Abs(countEquipe1 - countEquipe2), 1);
 
         }
     }
