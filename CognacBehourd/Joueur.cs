@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace CognacBehourd
 {
-    class Joueur
+    public class Joueur
     {
-        String Nom { get; set; }
-        String Prenom { get; set; }
-        int Poids { get; set; };
-        int Année_dAdhesion { get; set; };
-        String Arme { get; set; }
-        String Armure { get; set; }
+        public String Nom { get; set; }
+        public String Prenom { get; set; }
+        public int Poids { get; set; }
+        public int Annee_dAdhesion { get; set; }
+        public String Arme { get; set; }
+        public String Armure { get; set; }
 
 
         public Joueur()
+        {
+
+        }
+        public Joueur(String Nom, String Prenom, int Poids, int Annee_dAdhesion, String Arme = null, String Armure = null)
         {
 
         }
