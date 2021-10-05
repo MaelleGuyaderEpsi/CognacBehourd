@@ -20,5 +20,23 @@ namespace CognacBehourd
         {
 
         }
+        
+    }
+
+    public class MyExceptionAge : Exception
+    {
+        public MyExceptionAge()
+        {
+
+        }
+        public MyExceptionAge(string message) : base(message)
+        {
+
+        }
+        public MyExceptionAge(string message, Exception innerException) : base(message, innerException)
+        {
+
+        }
+
     }
 }

@@ -236,12 +236,12 @@ namespace TestUnitaire
         }
 
         [TestMethod]
-        [ExpectedException(typeof(MyException),
+        [ExpectedException(typeof(MyExceptionAge),
         "age non respecter")]
         public void Test_age_16()
         {
             Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles", false);
-
+            Joueur joueur2 = new Joueur("Bla", "Truc", 80, 1998, "Hache 2M", "Mailles", true);
 
             Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
             Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
@@ -249,6 +249,7 @@ namespace TestUnitaire
             List<Joueur> joueurs = new List<Joueur>();
 
             joueurs.Add(joueur1);
+            joueurs.Add(joueur2);
 
             foreach (Joueur joueur in joueurs)
             {
