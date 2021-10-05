@@ -149,5 +149,72 @@ namespace TestUnitaire
 
             Assert.AreEqual(Math.Abs(countEquipe1 - countEquipe2), 0);
         }
+
+        [TestMethod]
+        public void Test_Deux_Paires_Identiques()
+        {
+            List<Joueur> joueursPaire = new List<Joueur>();
+            Joueur joueurA1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
+            Joueur joueurA2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles");
+            Joueur joueurB1 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques");
+            Joueur joueurB2 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison");
+            joueursPaire.Add(joueurA1);
+            joueursPaire.Add(joueurA2);
+            joueursPaire.Add(joueurB1);
+            joueursPaire.Add(joueurB2);
+
+            Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
+            Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
+
+            affecterEquipe(joueursPaire, equipe1, equipe2);
+
+            List<Joueur> joueursEquipe1 = new List<Joueur>();
+            joueursEquipe1 = equipe1.Joueurs;
+
+            List<Joueur> joueursEquipe2 = new List<Joueur>();
+            joueursEquipe2 = equipe2.Joueurs;
+
+            Assert.IsTrue(joueursEquipe1[0].Valeur + joueursEquipe1[1].Valeur == joueursEquipe2[0].Valeur + joueursEquipe2[1].Valeur);
+
+        }
+        [TestMethod]
+        public void Test_Poids_Equipe()
+        {
+            List<Joueur> joueursPoids = new List<Joueur>();
+            Joueur joueurA1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
+            Joueur joueurA2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles");
+            Joueur joueurB1 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques");
+            Joueur joueurB2 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison");
+            joueursPoids.Add(joueurA1);
+            joueursPoids.Add(joueurA2);
+            joueursPoids.Add(joueurB1);
+            joueursPoids.Add(joueurB2);
+
+            Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
+            Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
+
+            affecterEquipe(joueursPoids, equipe1, equipe2);
+
+            List<Joueur> joueursEquipe1 = new List<Joueur>();
+            joueursEquipe1 = equipe1.Joueurs;
+
+            List<Joueur> joueursEquipe2 = new List<Joueur>();
+            joueursEquipe2 = equipe2.Joueurs;
+            int poidTotalEquipe1 = 0;
+            int poidTotalEquipe2 = 0;
+
+            for (int i=0; i>0; i++)
+            {
+                poidTotalEquipe1 += joueursEquipe1[i].Poids;
+                poidTotalEquipe2 += joueursEquipe2[i].Poids;
+            }
+
+            int moyPoidEquipe1 = poidTotalEquipe1 / joueursEquipe1.Count;
+            int moyPoidEquipe2 = poidTotalEquipe2 / joueursEquipe2.Count;
+
+            int diffMoy = Math.Abs(moyPoidEquipe1 - moyPoidEquipe2);
+
+            Assert.IsTrue(diffMoy<=8 || diffMoy>=-8);
+        }
     }
 }
