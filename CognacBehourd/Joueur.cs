@@ -14,6 +14,7 @@ namespace CognacBehourd
         public int Annee_dAdhesion { get; set; }
         public String Arme { get; set; }
         public String Armure { get; set; }
+        public float Valeur { get; set; }
 
 
         public Joueur()
