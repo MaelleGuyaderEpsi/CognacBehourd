@@ -84,7 +84,6 @@ namespace TestUnitaire
             ListJoueurPleine.Add(joueur4);
 
             Equipe equipePleine = new Equipe("equipePleine", ListJoueurPleine);
-            Assert.IsNotNull(equipePleine);
             Assert.IsTrue(ListJoueurPleine.Count != 0);
         }
 

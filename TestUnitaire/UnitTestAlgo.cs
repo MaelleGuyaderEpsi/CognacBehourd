@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using CognacBehourd;
+using static CognacBehourd.Algo;
 
 namespace TestUnitaire
 {
@@ -59,11 +61,27 @@ namespace TestUnitaire
         #endregion
 
         [TestMethod]
-        public void TestMethod1()
+        public void Test_Grand_Nombre_De_Joueur()
         {
-            //
-            // TODO: ajoutez ici la logique du test
-            //
+            List<Joueur> joueurs = new List<Joueur>();
+            for
+            Joueur joueur1 = new Joueur("GROS", "Paul", 90, 2006, "Hache 2M", "Mailles");
+            Joueur joueur2 = new Joueur("BLANC", "Louis", 90, 2006, "Dagues", "Mailles");
+            Joueur joueur3 = new Joueur("GIRAUD", "Jean-Michel", 80, 2003, "Sabre", "Plaques");
+            Joueur joueur4 = new Joueur("PARIS", "Théophile", 80, 2003, "Hallebarde", "Gambison");
+
+            
+
+            joueurs.Add(joueur4);
+            joueurs.Add(joueur3);
+            joueurs.Add(joueur2);
+            joueurs.Add(joueur1);
+
+            Equipe equipe1 = new Equipe("Equipe1", new List<Joueur>());
+            Equipe equipe2 = new Equipe("Equipe2", new List<Joueur>());
+
+            affecterEquipe(joueurs, equipe1, equipe2);
+
         }
     }
 }

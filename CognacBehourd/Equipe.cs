@@ -15,6 +15,7 @@ namespace CognacBehourd
         {
 
         }
+
         public Equipe(string NomEquipe, List<Joueur> JoueursEquipe)
         {
             Nom = NomEquipe;

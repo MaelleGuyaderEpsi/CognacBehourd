@@ -29,21 +29,21 @@ namespace CognacBehourd
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvParticipant = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Poids = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Annee_adhesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Arme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Armure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEquipe2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvEquipe1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +53,9 @@ namespace CognacBehourd
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.Start = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipe2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipe1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,26 +66,26 @@ namespace CognacBehourd
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // dgvParticipant
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvParticipant.AllowUserToOrderColumns = true;
+            this.dgvParticipant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeight = 29;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvParticipant.ColumnHeadersHeight = 29;
+            this.dgvParticipant.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nom,
             this.Prenom,
             this.Poids,
             this.Annee_adhesion,
             this.Arme,
             this.Armure});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(668, 486);
-            this.dataGridView2.TabIndex = 2;
+            this.dgvParticipant.Location = new System.Drawing.Point(3, 3);
+            this.dgvParticipant.Name = "dgvParticipant";
+            this.dgvParticipant.RowHeadersWidth = 51;
+            this.dgvParticipant.RowTemplate.Height = 24;
+            this.dgvParticipant.Size = new System.Drawing.Size(668, 486);
+            this.dgvParticipant.TabIndex = 2;
             // 
             // Nom
             // 
@@ -129,26 +129,28 @@ namespace CognacBehourd
             this.Armure.Name = "Armure";
             this.Armure.Width = 125;
             // 
-            // dataGridView1
+            // dgvEquipe2
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvEquipe2.AllowUserToAddRows = false;
+            this.dgvEquipe2.AllowUserToDeleteRows = false;
+            this.dgvEquipe2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEquipe2.ColumnHeadersHeight = 29;
+            this.dgvEquipe2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(686, 239);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvEquipe2.Location = new System.Drawing.Point(3, 3);
+            this.dgvEquipe2.Name = "dgvEquipe2";
+            this.dgvEquipe2.ReadOnly = true;
+            this.dgvEquipe2.RowHeadersWidth = 51;
+            this.dgvEquipe2.RowTemplate.Height = 24;
+            this.dgvEquipe2.Size = new System.Drawing.Size(686, 239);
+            this.dgvEquipe2.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -192,26 +194,28 @@ namespace CognacBehourd
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // dataGridView3
+            // dgvEquipe1
             // 
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvEquipe1.AllowUserToAddRows = false;
+            this.dgvEquipe1.AllowUserToDeleteRows = false;
+            this.dgvEquipe1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeight = 29;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEquipe1.ColumnHeadersHeight = 29;
+            this.dgvEquipe1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(686, 237);
-            this.dataGridView3.TabIndex = 4;
+            this.dgvEquipe1.Location = new System.Drawing.Point(3, 3);
+            this.dgvEquipe1.Name = "dgvEquipe1";
+            this.dgvEquipe1.ReadOnly = true;
+            this.dgvEquipe1.RowHeadersWidth = 51;
+            this.dgvEquipe1.RowTemplate.Height = 24;
+            this.dgvEquipe1.Size = new System.Drawing.Size(686, 237);
+            this.dgvEquipe1.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -265,7 +269,7 @@ namespace CognacBehourd
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridView2);
+            this.splitContainer1.Panel1.Controls.Add(this.dgvParticipant);
             // 
             // splitContainer1.Panel2
             // 
@@ -283,11 +287,11 @@ namespace CognacBehourd
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.dataGridView3);
+            this.splitContainer2.Panel1.Controls.Add(this.dgvEquipe1);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer2.Panel2.Controls.Add(this.dgvEquipe2);
             this.splitContainer2.Size = new System.Drawing.Size(692, 492);
             this.splitContainer2.SplitterDistance = 243;
             this.splitContainer2.TabIndex = 0;
@@ -313,9 +317,9 @@ namespace CognacBehourd
             this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipe2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipe1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -330,21 +334,21 @@ namespace CognacBehourd
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvParticipant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Poids;
         private System.Windows.Forms.DataGridViewTextBoxColumn Annee_adhesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Arme;
         private System.Windows.Forms.DataGridViewTextBoxColumn Armure;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEquipe2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvEquipe1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
