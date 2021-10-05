@@ -20,11 +20,11 @@ namespace CognacBehourd
         {
 
         }
+
         public Joueur(String Nom, String Prenom, int Poids, int Annee_dAdhesion, String Arme = null, String Armure = null)
         {
 
         }
-
-        
     }
+
 }
